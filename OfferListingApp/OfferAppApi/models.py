@@ -7,15 +7,15 @@ class Location(models.Model):
     def __str__(self):
         return self.location_name
 
-
 class Store(models.Model):
     store_location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    store_name = models.CharField(max_length=50
-    
-    def __str__(self):
-        return self.store_name
+    store_name = models.CharField(max_length=50)
 
-class Offer(models.Model):
+    def __str__(self):
+        return self.location_name
+
+
+class offer(models.Model):
     store_offer = models.ForeignKey(Store, on_delete=models.CASCADE)
     offer_text = models.CharField(max_length=200)
 
