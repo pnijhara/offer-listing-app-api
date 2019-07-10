@@ -15,7 +15,7 @@ class Store(models.Model):
         return self.location_name
 
 
-class offer(models.Model):
+class Offer(models.Model):
     store_offer = models.ForeignKey(Store, on_delete=models.CASCADE)
     offer_text = models.CharField(max_length=200)
 
