@@ -12,7 +12,7 @@ class Store(models.Model):
     store_name = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.location_name
+        return self.store_name
 
 
 class Offer(models.Model):
