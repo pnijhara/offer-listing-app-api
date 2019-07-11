@@ -8,6 +8,7 @@ from .models import Location, Store, Offer, User, Order, Payment, PaymentType
 from . serializers import UserSerializer, LocationSerializer, StoreSerializer, OfferSerializer
 from . serializers import PaymentSerializer, PaymentTypeSerializer, OrderSerializer
 
+
 class UserList(APIView):
 
     def get(self, request):
@@ -17,6 +18,7 @@ class UserList(APIView):
 
     def post(self):
         pass
+
     
 class LocationList(APIView):
 
@@ -28,6 +30,7 @@ class LocationList(APIView):
     def post(self):
         pass
 
+
 class OfferList(APIView):
 
     def get(self, request):
@@ -38,6 +41,7 @@ class OfferList(APIView):
     def post(self):
         pass
 
+
 class StoreList(APIView):
 
     def get(self, request):
@@ -47,7 +51,8 @@ class StoreList(APIView):
 
     def post(self):
         pass
-    
+
+
 class PaymentList(APIView):
 
     def get(self, request):
@@ -58,6 +63,7 @@ class PaymentList(APIView):
     def post(self):
         pass
 
+
 class PaymentTypeList(APIView):
 
     def get(self, request):
@@ -67,6 +73,7 @@ class PaymentTypeList(APIView):
 
     def post(self):
         pass
+
 
 class OrderList(APIView):
 
