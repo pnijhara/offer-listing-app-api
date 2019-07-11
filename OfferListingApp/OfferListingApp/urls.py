@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
+from OfferAppApi import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/', views.UserList.as_view()),
+    path('location/', views.LocationList.as_view()),
+    path('offer/', views.OfferList.as_view()),
+    path('order/', views.OrderList.as_view()),
+    path('payment/', views.PaymentList.as_view()),
+    path('paymenttype/', views.PaymentTypeList.as_view()),
+    path('store/', views.StoreList.as_view()),
 ]
