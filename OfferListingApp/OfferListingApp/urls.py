@@ -27,5 +27,4 @@ urlpatterns = [
     path('payment/', views.PaymentList.as_view()),
     path('paymenttype/', views.PaymentTypeList.as_view()),
     path('store/', views.StoreList.as_view()),
-
 ]
