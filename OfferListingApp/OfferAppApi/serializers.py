@@ -8,17 +8,20 @@ class UserSerializer(serializers.ModelSerializer):
         model = User     
         fields = '__all__'  
 
+
 class LocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location     
         fields = '__all__'  
 
+
 class StoreSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Store    
-        fields = '__all__'  
+        fields = '__all__'
+
 
 class OfferSerializer(serializers.ModelSerializer):
 
@@ -26,17 +29,20 @@ class OfferSerializer(serializers.ModelSerializer):
         model = Offer    
         fields = '__all__'  
 
+
 class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order    
         fields = '__all__'  
 
+
 class PaymentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Payment    
         fields = '__all__'  
+
 
 class PaymentTypeSerializer(serializers.ModelSerializer):
 
