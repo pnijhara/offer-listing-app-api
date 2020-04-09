@@ -7,7 +7,8 @@ from . serializers import PaymentSerializer, PaymentTypeSerializer, OrderSeriali
 
 class UserList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         user = User.objects.all()
         serializer = UserSerializer(user, many = True)
         return Response(serializer.data)
@@ -18,7 +19,8 @@ class UserList(APIView):
     
 class LocationList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         location = Location.objects.all()
         serializer = LocationSerializer(location, many = True)
         return Response(serializer.data)
@@ -29,7 +31,8 @@ class LocationList(APIView):
 
 class OfferList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         offer = Offer.objects.all()
         serializer = OfferSerializer(offer, many = True)
         return Response(serializer.data)
@@ -40,7 +43,8 @@ class OfferList(APIView):
 
 class StoreList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         store = Store.objects.all()
         serializer = StoreSerializer(store, many = True)
         return Response(serializer.data)
@@ -51,7 +55,8 @@ class StoreList(APIView):
 
 class PaymentList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         payment = Payment.objects.all()
         serializer = PaymentSerializer(payment, many = True)
         return Response(serializer.data)
@@ -62,7 +67,8 @@ class PaymentList(APIView):
 
 class PaymentTypeList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         payment_type = PaymentType.objects.all()
         serializer = PaymentTypeSerializer(payment_type, many = True)
         return Response(serializer.data)
@@ -73,7 +79,8 @@ class PaymentTypeList(APIView):
 
 class OrderList(APIView):
 
-    def get(self, request):
+    @staticmethod
+    def get(request):
         order = Order.objects.all()
         serializer = OrderSerializer(order, many = True)
         return Response(serializer.data)
